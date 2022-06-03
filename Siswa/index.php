@@ -23,7 +23,7 @@ if (@$_SESSION['Siswa']) {
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>E-learning | <?= $data['nama_siswa']; ?></title>
+    <title>ONLINE CLASS M’TECH | <?= $data['nama_siswa']; ?></title>
     <!-- plugins:css -->
 
     <link rel="stylesheet" href="../vendor/node_modules/mdi/css/materialdesignicons.min.css">
@@ -42,9 +42,9 @@ if (@$_SESSION['Siswa']) {
     <script type="text/javascript" src="../assets/jquery/jquery-2.0.2.min.js"></script>
     <script type="text/javascript" src="../vendor/ckeditor/ckeditor.js"></script>
     <link rel="stylesheet" type="text/css" href="../vendor/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/login/css/main.css?v=<?php echo time(); ?>">
     <script type="text/javascript" src="js/main.js"></script>
     <link href="css/ujian.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../vendor/login/css/main.css?v=<?php echo time(); ?>">
     <script type="text/javascript" src="js/sidein_menu.js"></script>
 
 
@@ -68,14 +68,25 @@ if (@$_SESSION['Siswa']) {
       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-left col-lg-6" style="background-color: #517fd4">
           <a class="navbar-brand brand-logo" href="index.php" style="font-family:Aegyptus;font-weight: bold;font-size: 30px;">
-            <img src="../vendor/images/MTC.png" class="animated-logo" alt="logo" style="height: 45px;width: 45px;border-radius: 10px;"> <b style="color:white">M'TECH ONLINE CLASS</b>
-          </a>
+            <img src="../vendor/images/MTC.png" class="animated-logo" alt="logo" style="height: 45px;width: 45px;border-radius: 10px;"> <b style="color:white">ONLINE CLASS M'TECH</b>
 
+          </a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center col-lg-6" style="background-color: #517fd4">
+          <ul class="navbar-nav navbar-nav-right" style="border-top-left-radius:50px;color: black;border-bottom-left-radius:50px;color: #fff ">
+            <?php
+            // notifikasi materi baru
+            $no = 1;
+            $sqlmtr = mysqli_query($con, "SELECT * FROM tb_materi
 
-          <ul class="navbar-nav navbar-nav-right">
+            INNER JOIN tb_roleguru ON tb_materi.id_roleguru=tb_roleguru.id_roleguru
 
+          INNER JOIN tb_master_mapel ON tb_roleguru.id_mapel=tb_master_mapel.id_mapel
+          INNER JOIN tb_guru ON tb_roleguru.id_guru=tb_guru.id_guru
+          WHERE tb_roleguru.id_kelas='$data[id_kelas]' GROUP BY tb_roleguru.id_mapel ");
+            $jmlh = mysqli_num_rows($sqlmtr);
+
+            ?>
             <li class="nav-item dropdown">
               <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
                 <i class="mdi mdi-bell-ring"></i>
@@ -116,6 +127,7 @@ if (@$_SESSION['Siswa']) {
 
             <li class="nav-item d-none d-lg-block">
               <a class="nav-link" href="#">
+                <b>My Profile</b>
                 <img class="img-xs rounded-circle" src="../vendor/images/img_Siswa/<?= $data['foto']; ?>" alt="">
               </a>
             </li>
@@ -144,8 +156,46 @@ if (@$_SESSION['Siswa']) {
               <a class="nav-link" href="index.php"><img class="menu-icon" src="../vendor/images/menu_icons/01.png" alt="menu icon"><span class="menu-title">DASHBOARD</span></a>
             </li>
 
+            <li class="nav-item">
+              <a class="nav-link" href="?page=profil"><img class="menu-icon" src="../vendor/images/menu_icons/10.png" alt="menu icon"> <span class="menu-title">My Profil</span></a>
+            </li>
 
 
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#menuMateri" aria-expanded="false" aria-controls="general-pages"> <img class="menu-icon" src="../vendor/images/menu_icons/04.png" alt="menu icon"> <span class="menu-title">MATERI</span><i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="menuMateri">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="?page=materi"><img class="menu-icon" src="../vendor/images/menu_icons/04.png" alt="menu icon">ALL MATERI</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?page=tugas"><img class="menu-icon" src="../vendor/images/menu_icons/04.png" alt="menu icon"> <span class="menu-title">TUGAS </span></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#menuEvaluasi" aria-expanded="false" aria-controls="general-pages"> <img class="menu-icon" src="../vendor/images/menu_icons/04.png" alt="menu icon"> <span class="menu-title">EVALUASI</span><i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="menuEvaluasi">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="?page=ujian" style="font-size: 15px;"><i class="fa fa-info-circle"></i>&nbsp; INFO UJIAN</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="?page=evaluasi&act=nilai" style="font-size: 15px;"><i class="fa fa-file-text"></i>&nbsp; DAFTAR NILAI</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="?page=evaluasi" style="font-size: 15px;"><i class="fa fa-language"></i>&nbsp; DAFTAR SOAL</a>
+                  </li>
+
+
+                </ul>
+              </div>
+            </li>
+            <hr>
 
             <li class="nav-item purchase-button">
               <a class="nav-link" href="logout.php?ID=<?php echo $data['id_siswa'] ?>">
@@ -154,8 +204,90 @@ if (@$_SESSION['Siswa']) {
 
           </ul>
         </nav>
+        <!-- partial -->
+        <div class="main-panel">
 
+          <!-- Konten -->
+          <?php
+          error_reporting();
+          $page = @$_GET['page'];
+          $act = @$_GET['act'];
+          if ($page == 'materi') {
+            if ($act == '') {
+              include 'modul/materi/data_materi.php';
+            } elseif ($act == 'mapel') {
+              include 'modul/materi/view_mapel.php';
+            } elseif ($act == 'semester') {
+              include 'modul/materi/view_semester.php';
+            }
+          } elseif ($page == 'profil') {
+            if ($act == '') {
+              include 'modul/profil/data_profil.php';
+            }
+          } elseif ($page == 'evaluasi') {
+            if ($act == '') {
+              include 'modul/evaluasi/data_soal.php';
+            } elseif ($act = 'nilai') {
+              include 'modul/evaluasi/data_nilai.php';
+            }
+          } elseif ($page == 'ujian') {
+            if ($act == '') {
+              include 'modul/evaluasi/info_ujian.php';
+            }
+          } elseif ($page == 'chat') {
+            if ($act == '') {
+              include 'chat.php';
+            } elseif ($act == 'del') {
+              include 'modul/chat/del.php';
+            }
+          } elseif ($page == 'tugas') {
+            if ($act == '') {
+              include 'modul/tugas/data_tugas.php';
+            } elseif ($act == 'upload') {
+              include 'modul/tugas/upload_tugas.php';
+            }
+          } elseif ($page == 'proses') {
+            include 'modul/models.php';
+            include '../media/story.html';
+          } elseif ($page == '') {
+            // include 'Home.php';
+          ?>
+            <div class="content-wrapper">
+              <h3> <b>Dashboard</b> <small class="text-muted">/Siswa</small>
+              </h3>
+              <hr>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
 
+                      <div id="isi"> </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <?php
+          } else {
+            echo "<b>4014!</b> Tidak ada halaman !";
+          }
+
+          ?>
+
+          <!-- End-kontent -->
+
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer">
+            <div class="container-fluid clearfix">
+              <span class="text-info d-block text-center text-sm-left d-sm-inline-block"><?= $apl['copyright']; ?></span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"><?= $apl['nama_sekolah']; ?> <i class="fa fa-graduation-cap text-danger"></i></span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
         <!-- main-panel ends -->
       </div>
       <!-- page-body-wrapper ends -->
