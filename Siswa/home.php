@@ -8,6 +8,7 @@ echo '<div class="grup">
 
 <h4>Daftar Ujian</h4></div> <br>';
 
+
 //Cek jumlah ujian pada tanggal sekarang
 $tgl = date('Y-m-d');
 $qujian = mysqli_query($con, "SELECT * FROM ujian t1, kelas_ujian t2 WHERE t1.tanggal='$tgl' AND t1.id_ujian=t2.id_ujian AND t2.id_kelas='$_SESSION[kelas]' AND t2.aktif='Y'");
@@ -174,11 +175,11 @@ echo '</div> ';
                     </div>
                     <p></p>
                     <div class="form-group">
-                      <input type="hidden" name="pengirim" value="<?php echo $_SESSION['nis']; ?>">
+                      <input type="hidden" name="pengirim" value="<?php echo $_SESSION['username']; ?>">
                       <input type="hidden" name="status" value="<?php echo $daftar_pesan['id_pesan']; ?>">
-                      <input type="hidden" name="penerima" value="<?php echo $daftar_pesan['nik']; ?>">
+                      <input type="hidden" name="penerima" value="<?php echo $daftar_pesan['kode_guru']; ?>">
                       <input type="hidden" name="kelas" value="<?php echo $daftar_pesan['id_kelas']; ?>">
-                      <input type="hidden" name="jurusan" value="<?php echo $daftar_pesan['id_jurusan']; ?>">
+
                       <textarea name="isi_pesan" id="ckeditor" class="form-control" rows="5">Tulis Pesan</textarea>
                     </div>
 
@@ -223,7 +224,7 @@ echo '</div> ';
             // tampilkan data guru
             $sqlGuru = mysqli_query($con, "SELECT * FROM tb_guru WHERE id_guru='$role[id_guru]'");
             while ($guru = mysqli_fetch_array($sqlGuru)) {
-              echo "<option value='$guru[nik]'>$guru[nama_guru]</option>";
+              echo "<option value='$guru[kode_guru]'>$guru[nama_guru]</option>";
             }
             ?>
 
@@ -237,7 +238,7 @@ echo '</div> ';
 
       </div>
       <div class="form-group">
-        <input type="hidden" name="idpengirim" value="<?php echo "$_SESSION[username]"; ?>">
+        <input type="hidden" name="idpengirim" value="<?php echo "$_SESSION[id_siswa]"; ?>">
         <textarea name="pesan" class="form-control" rows="5" id="ckeditor1">Tulis Pesan</textarea>
       </div>
       <div class="form-group">
