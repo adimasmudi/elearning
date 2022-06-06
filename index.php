@@ -1,283 +1,412 @@
-<?php
-session_start();
-include 'config/db.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Online Class M'Tech</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--===============================================================================================-->
-  <link rel="shortcut icon" type="image/png" href="vendor/images/MTC.png" />
-  <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="vendor/login/vendor/bootstrap/css/bootstrap.min.css">
-  <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="vendor/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-  <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="vendor/login/fonts/iconic/css/material-design-iconic-font.min.css">
-  <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="vendor/login/vendor/animate/animate.css">
-  <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="vendor/login/vendor/css-hamburgers/hamburgers.min.css">
-  <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="vendor/login/vendor/animsition/css/animsition.min.css">
-  <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="vendor/login/vendor/select2/select2.min.css">
-  <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="vendor/login/vendor/daterangepicker/daterangepicker.css">
-  <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="vendor/login/css/util.css">
-  <link rel="stylesheet" type="text/css" href="vendor/login/css/main.css?v=<?php echo time(); ?>">
-  <!--===============================================================================================-->
-  <link rel="stylesheet" href="vendor/node_modules/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="vendor/node_modules/simple-line-icons/css/simple-line-icons.css">
-  <!-- endinject -->
-  <!-- plugin css for this page -->
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <!-- <link rel="stylesheet" href="vendor/css/style.css"> -->
-  <!-- endinject -->
-  <link href="vendor/sweetalert/sweetalert.css" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>WELCOME ONLINE CLASS M'TECH</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="vendor/assets/img/MTC.png" rel="icon">
+  <link href="vendor/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="vendor/assets/css/style_index.css?v=<?php echo time(); ?>" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Maxim - v4.7.0
+  * Template URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
 
-  <div class="limiter">
-    <div class="container-login100" style="background-image: url('vendor/login/images/bg-01.jpg');">
-      <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-        <center><img src="vendor/images/MTC.png" class="animated-logo" alt="" height="120" width="140"></center>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
 
+      <div class="logo">
+        <h1><a href="index.php">CV. MADURA TECHNOVATION</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
 
-        <form method="post" action="" class="login100-form validate-form">
-          <span class="login100-form-title p-b-20">
-            ONLINE CLASS M’TECH
-          </span>
-          <h4 class="text-center">
-            SILAHKAN LOGIN
-          </h4>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
-          <div class="wrap-input100 validate-input m-b-23" data-validate="Username is reauired">
-            <span for="nis" class="label-input100">Username</span>
-            <input class="input100" type="text" name="username" placeholder="Masukkan Username...">
-            <span class="focus-input100" data-symbol="&#xf206;"></span>
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+      <h1>ONLINE CLASS M'TECH</h1>
+      <h2>Online Class M'Tech merupakan aplikasi e-learning berbasis website yang digunakan untuk membantu proses belajar mengajar secara online di Lembaga Kursus dan Pelatihan CV. Madura Technovation sehingga proses belajar mengajar lebih menarik, interaktif, dan bervariasi dengan memanfaatkan teknologi.</h2>
+      <a href="login.php" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xl-6 col-lg-7" data-aos="fade-right">
+            <img src="vendor/assets/img/mtc2.jpg" class="img-fluid" alt="">
           </div>
-
-          <div class="wrap-input100 validate-input m-b-23" data-validate="Password is required">
-            <span for="Password" class="label-input100">Password</span>
-            <input class="input100" type="password" name="password" placeholder="Masukkan Password...">
-            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0">
+            <h3 data-aos="fade-up">CV. MADURA TECHNOVATION</h3>
+            <p data-aos="fade-up">
+              CV. Madura Technovation adalah sebuah perusahaan Swasta Nasional yang bergerak dalam bidang industri kreatif pembuatan dan pengembangan perangkat lunak (Software), pembuatan konten kreatif untuk website dan media sosial, serta Sistem pembelajaran modern berbasis keunggulan otak sebagai solusi sekolah dan sistem pendidikan agar cepat, mudah, efisien, dan akuntabel. <br>
+              <br>
+              Nama Perusahaan : CV. Madura Technovation <br>
+              Direktur : Arif Budiyanto, S.Kom <br>
+              Nomor Ijin Berusaha (NIB) : 9120212092422 <br>
+              Nomor SIUP : 052/13.22/SIUP-MK/V/2018 <br>
+              Nomor TDP : 132334707870 <br>
+              Alamat : Kmp. Barat Tambak Rt.02 RW.06 Kelurahan Pejagan Kecamatan Bangkalan. <br>
+              Alamat LPK: Jl, Colibri AA-32 Wisma Pangeranan Asri Bangkalan <br>
+              Kontak : 089613899282
+            </p>
           </div>
+        </div>
 
-          <div class="wrap-input100 validate-input" data-validate="Password is required">
-            <span class="label-input100">User</span>
-            <select name="level" class="form-control" required style="background-color: #212121;border-radius: 7px;color: #fff;font-weight: bold;">
-              <option value="">-- Pilih Level --</option>
-              <option value="1"> Guru </option>
-              <option value="2"> Siswa </option>
-              <option value="3"> Admin </option>
-            </select>
-          </div>
+      </div>
+    </section><!-- End About Section -->
 
-          <div class="text-right p-t-8 p-b-31">
-            <a href="https://wa.me/6281318159189">
-              Forgot password?
-            </a>
-          </div>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
 
-          <div class="container-login100-form-btn m-b-23">
-            <div class="wrap-login100-form-btn">
-              <div class="login100-form-bgbtn"></div>
-              <button value="LOGIN" name="Login" type="submit" class="login100-form-btn">
-                Login
-              </button>
+        <div class="section-title" data-aos="fade-up">
+          <h2>Services</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Penjualan Website</a></h4>
+              <p class="description">Anda dapat memilih Fitur Pemesanan Website dibawah ini: <br> 1. Very Basic (1.500.000) <br>2. Simple Silver (2.500.000) <br> 3. Medium Gold (3.000.000)</p>
             </div>
           </div>
 
-          <div class="container-login100-form-btn">
-            <div class="wrap-login100-form-btn">
-              <div class="login100-form-bgbtn"></div>
-              <button value="daftar_elearning" type="submit" class="login100-form-btn" onclick="window.location.href='Home/Registrasion.php'">
-                REGISTER FOR STUDENT
-              </button>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Penjualan dan Pemasangan CCTV</a></h4>
+              <p class="description">Anda dapat memilih jenis CCTV di bawah ini.<br>1. Camera Analog <br>2. IP Camera <br>3. Smart CCTV</p>
             </div>
           </div>
-        </form>
-        <?php
 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-          $username = trim(mysqli_real_escape_string($con, $_POST['username']));
-          $pass = sha1($_POST['password']);
-          $level = $_POST['level'];
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Penjualan dan Service Alat Elektronik</a></h4>
+              <p class="description">Anda dapat membeli dan memperbaiki alat elktronik seperti komputer, laptop, dll</p>
+            </div>
+          </div>
 
-          if ($level == '1') {
-            $sql = mysqli_query($con, "SELECT * FROM tb_guru WHERE email='$username' AND password='$pass' AND status='Y' ") or die(mysqli_error($con));
-            $data = mysqli_fetch_array($sql);
-            $id = $data[0];
-            $cek = mysqli_num_rows($sql);
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Pelatihan Kursus</a></h4>
+              <p class="description">Anda dapat memilih jenis kursus di bawah ini: <br>1. Regular, Rp. 200.000 per bulan (Satu minggu 1x pertemuan)<br>2. Private , Rp. 250.000 per bulan (Satu minggu 1x pertemuan)<br>3. Paket pelatihan kerja 1 tahun + pemagangan, Rp. 5.500.000 (Satu minggu 2x pertemuan)</p>
+            </div>
+          </div>
 
-            if ($cek > 0) {
-              $_SESSION['Guru'] = $id;
-              $_SESSION['upload_gambar'] = TRUE;
+        </div>
 
-              echo "
-              <script type='text/javascript'>
-              setTimeout(function () {
-              swal({
-             title: 'Sukses',
-              text:  'Login Berhasil..',
-              type: 'success',
-              timer: 3000,
-              showConfirmButton: true
-              });     
-              },10);  
-              window.setTimeout(function(){ 
-              window.location.replace('Guru/index.php');
-              } ,3000);   
-              </script>";
-            } else {
-              echo "
-          <script type='text/javascript'>
-          setTimeout(function () {
-          swal({
-          title: 'Error',
-           text:  'User ID / Password Salah Atau Belum Dikonfirmasi Oleh Admin !',
-          type: 'error',
-          timer: 3000,
-          showConfirmButton: true
-          });     
-          },10);  
-          window.setTimeout(function(){ 
-          window.location.replace('?pages=login');
-          } ,3000);   
-          </script>";
-            }
-          } elseif ($level == '2') {
-            $sql = mysqli_query($con, "SELECT * FROM tb_siswa WHERE username='$username' AND password='$pass' AND aktif='Y' ") or die(mysqli_error($con));
-            $data = mysqli_fetch_array($sql);
-            $id = $data[0];
-            $cek = mysqli_num_rows($sql);
+      </div>
 
-            if ($cek > 0) {
+      <!-- ======= Portfolio Section ======= -->
+      <section id="portfolio" class="portfolio section-bg">
+        <div class="container">
 
-              $_SESSION['Siswa'] = $id;
-              $_SESSION['username']     = $data['username'];
-              $_SESSION['namalengkap']  = $data['nama_siswa'];
-              $_SESSION['password']     = $data['password'];
-              $_SESSION['nis']          = $data['nis'];
-              $_SESSION['id_siswa']          = $data['id_siswa'];
-              $_SESSION['kelas']        = $data['id_kelas'];
-              $_SESSION['tingkat']        = $data['tingkat'];
-              mysqli_query($con, "UPDATE tb_siswa SET status='Online' WHERE id_siswa='$data[id_siswa]'");
-              echo "
-              <script type='text/javascript'>
-              setTimeout(function () {
-              swal({
-              title: 'Sukses',
-              text:  'Login Berhasil..',
-              type: 'success',
-              timer: 3000,
-              showConfirmButton: true
-              });     
-              },10);  
-              window.setTimeout(function(){ 
-              window.location.replace('Siswa/index.php');
-              } ,3000);   
-              </script>";
-            } else {
-              echo "
-          <script type='text/javascript'>
-          setTimeout(function () {
-          swal({
-          title: 'MAAF !',
-          text:  'User ID / Password Salah Atau Belum Dikonfirmasi Oleh Admin !',
-          type: 'error',
-          timer: 3000,
-          showConfirmButton: true
-          });     
-          },10);  
-          window.setTimeout(function(){ 
-          window.location.replace('?pages=login');
-          } ,3000);   
-          </script>";
-            }
-          } elseif ($level == '3') {
-            $sql = mysqli_query($con, "SELECT * FROM tb_admin WHERE username='$username' AND password='$pass' AND aktif='Y' ") or die(mysqli_error($con));
-            $data = mysqli_fetch_array($sql);
-            $id = $data[0];
-            $cek = mysqli_num_rows($sql);
+          <div class="section-title" data-aos="fade-up">
+            <h2>Portfolio</h2>
+          </div>
 
-            if ($cek > 0) {
-              $_SESSION['Admin'] = $id;
-              $_SESSION['upload_gambar'] = TRUE;
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-app">Website</li>
+                <li data-filter=".filter-card">CCTV</li>
+                <li data-filter=".filter-web">Kursus</li>
+              </ul>
+            </div>
+          </div>
 
-              echo "
-          <script type='text/javascript'>
-          setTimeout(function () {
-          swal({
-          title: 'Admin',
-          text:  'Login Berhasil..',
-          type: 'success',
-          timer: 3000,
-          showConfirmButton: true
-          });     
-          },10);  
-          window.setTimeout(function(){ 
-          window.location.replace('Admin/index.php');
-          } ,3000);   
-          </script>";
-            } else {
-              echo "
-      <script type='text/javascript'>
-      setTimeout(function () {
-      swal({
-      title: 'Gagal',
-       text:  'User ID / Password Salah Atau Belum Dikonfirmasi Oleh Admin !',
-      type: 'error',
-      timer: 3000,
-      showConfirmButton: true
-      });     
-      },10);  
-      window.setTimeout(function(){ 
-      window.location.replace('?pages=login');
-      } ,3000);   
-      </script>";
-            }
-          }
-        }
-        ?>
+          <div class="row portfolio-container" data-aos="fade-up">
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="vendor/assets/img/portfolio/website1..jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Website 1</h4>
+                  <p>Website</p>
+                  <div class="portfolio-links">
+                    <a href="vassets/img/portfolio/website1..jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img src="vendor/assets/img/portfolio/kursus3..jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Kursus 3</h4>
+                  <p>Kursus</p>
+                  <div class="portfolio-links">
+                    <a href="vendor/assets/img/portfolio/kursus3..jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="vendor/assets/img/portfolio/website2..jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Website 2</h4>
+                  <p>Website</p>
+                  <div class="portfolio-links">
+                    <a href="vendor/assets/img/portfolio/website2..jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                <img src="vendor/assets/img/portfolio/cctv2..jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>CCTV 2</h4>
+                  <p>CCTV</p>
+                  <div class="portfolio-links">
+                    <a href="vendor/assets/img/portfolio/cctv2..jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img src="vendor/assets/img/portfolio/kursus2..jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Kursus 2</h4>
+                  <p>Kursus</p>
+                  <div class="portfolio-links">
+                    <a href="vendor/assets/img/portfolio/kursus2..jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="vendor/assets/img/portfolio/website3..jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Website 3</h4>
+                  <p>Website</p>
+                  <div class="portfolio-links">
+                    <a href="vendor/assets/img/portfolio/website3..jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                <img src="vendor/assets/img/portfolio/cctv1..jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>CCTV 1</h4>
+                  <p>CCTV</p>
+                  <div class="portfolio-links">
+                    <a href="vendor/assets/img/portfolio/cctv1..jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                <img src="vendor/assets/img/portfolio/cctv3..jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>CCTV 3</h4>
+                  <p>CCTV</p>
+                  <div class="portfolio-links">
+                    <a href="vendor/assets/img/portfolio/cctv3..jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img src="vendor/assets/img/portfolio/kursus3..jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Kursus 3</h4>
+                  <p>Kursus</p>
+                  <div class="portfolio-links">
+                    <a href="vendor/assets/img/portfolio/kursus3..jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section><!-- End Portfolio Section -->
+
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container">
+
+          <div class="section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+          </div>
+
+          <div class="row no-gutters justify-content-center" data-aos="fade-up">
+
+            <div class="col-lg-5 d-flex align-items-stretch">
+              <div class="info">
+                <div class="address">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Location:</h4>
+                  <p>AJl. Clibri AA-32 Pangeranan Asri</p>
+                </div>
+
+                <div class="email mt-4">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>arif.manajementi@gmail.com</p>
+                </div>
+
+                <div class="phone mt-4">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>0896 1389 9282 <br> 0852 5755 9996</p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+      </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>CV. MADURA TECHNOVATION</h3>
+              <p>
+                AJl. Clibri AA-32 <br>
+                Pangeranan Asri <br><br>
+                <strong>Phone:</strong> 0896 1389 9282<br>
+                <strong>Email:</strong> arif.manajementi@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Portfolio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Penjualan Website</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Penjualan dan Pemasangan CCTV</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Penjualan dan Service Elektronik</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Lembaga Kursus Pelatihan</a></li>
+            </ul>
+          </div>
+
+
+        </div>
       </div>
     </div>
-  </div>
 
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>CV. Madura Technovation</span></strong>
+      </div>
 
-  <div id="dropDownSelect1"></div>
+    </div>
+  </footer><!-- End Footer -->
 
-  <!--===============================================================================================-->
-  <script src="vendor/login/vendor/jquery/jquery-3.2.1.min.js"></script>
-  <!--===============================================================================================-->
-  <script src="vendor/login/vendor/animsition/js/animsition.min.js"></script>
-  <!--===============================================================================================-->
-  <script src="vendor/login/vendor/bootstrap/js/popper.js"></script>
-  <script src="vendor/login/vendor/bootstrap/js/bootstrap.min.js"></script>
-  <!--===============================================================================================-->
-  <script src="vendor/login/vendor/select2/select2.min.js"></script>
-  <!--===============================================================================================-->
-  <script src="vendor/login/vendor/daterangepicker/moment.min.js"></script>
-  <script src="vendor/login/vendor/daterangepicker/daterangepicker.js"></script>
-  <!--===============================================================================================-->
-  <script src="vendor/login/vendor/countdowntime/countdowntime.js"></script>
-  <!--===============================================================================================-->
-  <script src="vendor/login/js/main.js"></script>
-  <script src="vendor/node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="vendor/node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="vendor/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="vendor/sweetalert/sweetalert.min.js"></script>
-  <!-- endinject -->
-  <!-- inject:js -->
-  <script src="../vendor/js/off-canvas.js"></script>
-  <script src="../vendor/js/misc.js"></script>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/assets/vendor/aos/aos.js"></script>
+  <script src="vendor/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="vendor/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="vendor/assets/js/main.js"></script>
 
 </body>
 
