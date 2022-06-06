@@ -395,6 +395,25 @@
     </div>
   </footer><!-- End Footer -->
 
+  <!-- Modal Welcome -->
+  <div id="simpleModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Welcome to ONLINE CLASS M'TECH</h5>
+          <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="vendor/assets/img/SELAMAT DATANG.png" alt="selamat datang" class="image-welcome">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End Modal Welcome -->
+
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -407,6 +426,23 @@
 
   <!-- Template Main JS File -->
   <script src="vendor/assets/js/main.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      OpenBootstrapPopup();
+    };
+
+    function OpenBootstrapPopup() {
+      $("#simpleModal").modal('show');
+    }
+
+    $('#close').on('click', function() {
+      $("#simpleModal").modal('hide');
+    })
+  </script>
 
 </body>
 

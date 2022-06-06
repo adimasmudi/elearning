@@ -308,14 +308,13 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: calc(100vh - 70px);
-  background: url("../img/mtc2.jpg") center center;
+  background: url('../../login/images/bg-01.jpg') center center;
   background-size: cover;
-  background-position: 0px 50px;
   position: relative;
   margin-top: 70px;
   padding: 0;
 }
-#hero:before {
+/* #hero:before {
   content: "";
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -323,7 +322,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   right: 0;
-}
+} */
 #hero .container {
   z-index: 2;
 }
@@ -1177,6 +1176,17 @@ section {
     transform: rotate(360deg);
   }
 }
+
+/*--------------------------------------------------------------
+# Modal
+--------------------------------------------------------------*/
+.image-welcome{
+  height:460px;
+  width:460px;
+}
+/*--------------------------------------------------------------
+# Modal
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Footer

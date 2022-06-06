@@ -63,7 +63,7 @@
 
                                 <!-- essay -->
                                 <?php foreach ($sql_essay as $row) { ?>
-                                    <?php print_r($row); ?>
+
                                     <tr>
 
                                         <td><?= $no++; ?>.</td>
