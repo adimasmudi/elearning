@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-    <h4> <b>Master</b> <small class="text-muted">/ mapel</small>
+    <h4> <b>DATA MASTER</b> <small class="text-muted">(Subject Matter)</small>
     </h4>
     <hr>
     <div class="row">
@@ -9,13 +9,13 @@
                 <p class="card-description">
                 <a data-toggle="modal" data-target="#add" class="btn btn-info text-white pull-right"><i class="fa fa-plus"></i> Add mapel</a> <br>
                 </p>
-                <h4 class="card-title">Data mapel</h4>
+                <h4 class="card-title">Data Mata Pelajaran</h4>
                     <div class="table-responsive">
                         <table class="table table-condensed table-striped table-hover" id="data">
                         <thead class="bg-dark text-white">
                         <tr>
                         <th>No.</th> 
-                        <th>Nama mapel</th>  
+                        <th>Nama Mata Pelajaran</th>  
                         <th>Opsi</th>                     
                         </tr>                        
                         </thead>  
@@ -35,11 +35,11 @@
                             <div class="modal fade" id="edit<?=$d['id_mapel']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                             <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <div class="modal-header"><h4 class="modal-title"> Edit mapel </h4></div>
+                                <div class="modal-header"><h4 class="modal-title"> Edit Mata Pelajaran </h4></div>
                                 <form action="" method="post">
                                     <div class="modal-body">
                                         <div class="form-group">
-                                        <label for="mapel"> Nama mapel</label>
+                                        <label for="mapel"> Nama Mata Pelajaran</label>
                                         <input type="hidden" name="id" value="<?=$d['id_mapel']?>"> 
                                         <input type="text" id="mapel" name="mapel" class="form-control" value="<?=$d['mapel']?>">  </div>
                                     </div>
@@ -92,12 +92,12 @@
 <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title"> Tambah mapel </h4></div>
+            <div class="modal-header"><h4 class="modal-title"> Tambah Mata Pelajaran </h4></div>
             <form action="" method="post">
                 <div class="modal-body">
                     <div class="form-group">
-                    <label for="mapel"> Nama mapel</label>
-                    <input type="text" id="mapel" name="mapel" class="form-control" placeholder="Nama mapel ..">                    
+                    <label for="mapel"> Nama Mata Pelajaran</label>
+                    <input type="text" id="mapel" name="mapel" class="form-control" placeholder="Nama Mata Pelajaran ...">                    
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -4,7 +4,7 @@ foreach ($edit as $d)
 
 ?>
 <div class="content-wrapper">
-  <h4> <b>User</b> <small class="text-muted">/ Edit Siswa</small>
+  <h4> <b>ADMIN</b> <small class="text-muted">(Edit Siswa)</small>
   </h4>
   <hr>
   <div class="row">

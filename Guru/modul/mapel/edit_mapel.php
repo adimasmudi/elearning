@@ -1,6 +1,6 @@
 <div class="content-wrapper">
   <h4>
-    Mata Pelajaran <small class="text-muted">/ Ubah</small>
+    Kelas & Mata Pelajaran <small class="text-muted">/ Ubah</small>
   </h4>
   <hr>
   <div class="row">

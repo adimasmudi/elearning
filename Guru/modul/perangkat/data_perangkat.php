@@ -1,6 +1,6 @@
 <div class="content-wrapper">
   <h4>
-    Perangkat
+    PERANGKAT (Guru)
   </h4>
   <hr>
   <?php

@@ -169,13 +169,13 @@ if (@$_SESSION['Guru']) {
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.php"><img class="menu-icon" src="../vendor/images/menu_icons/01.png" alt="menu icon"><span class="menu-title">DASHBOARD</span></a>
+              <a class="nav-link" href="index.php"><img class="menu-icon" src="../vendor/images/menu_icons/01.png" alt="menu icon"><span class="menu-title">HOME</span></a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="?page=mapel">
                 <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="menu-title">MATA PELAJARAN</span>
+                <span class="menu-title">CLASS</span>
               </a>
             </li>
 
@@ -190,7 +190,7 @@ if (@$_SESSION['Guru']) {
             <li class="nav-item">
               <a class="nav-link" href="?page=materi">
                 <i class="fa fa-leanpub" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="menu-title">MATERI</span>
+                <span class="menu-title">THEORY</span>
               </a>
             </li>
             <li class="nav-item">

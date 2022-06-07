@@ -136,7 +136,7 @@ echo '</div> ';
       // query pesan
 
       $query_daftar_pesan = mysqli_query($con, "SELECT P.*, M.kode_guru, M.nama_guru,M.foto
-  FROM pesan P, tb_guru M WHERE P.id_pengirim=M.kode_guru  AND P.id_kelas='$rg[id_kelas]' ORDER BY P.id_pesan DESC");
+  FROM pesan P, tb_guru M WHERE P.id_pengirim=M.id_guru  AND P.id_kelas='$rg[id_kelas]' ORDER BY P.id_pesan DESC");
 
       while ($daftar_pesan = mysqli_fetch_array($query_daftar_pesan)) {
         $kelas = mysqli_query($con, "SELECT kelas FROM tb_master_kelas WHERE id_kelas='$daftar_pesan[id_kelas]' ");
@@ -174,10 +174,11 @@ echo '</div> ';
                       <p><?php echo $daftar_pesan['isi_pesan']; ?></p>
                     </div>
                     <p></p>
+
                     <div class="form-group">
-                      <input type="hidden" name="pengirim" value="<?php echo $_SESSION['username']; ?>">
+                      <input type="hidden" name="pengirim" value="<?php echo $_SESSION['Siswa']; ?>">
                       <input type="hidden" name="status" value="<?php echo $daftar_pesan['id_pesan']; ?>">
-                      <input type="hidden" name="penerima" value="<?php echo $daftar_pesan['kode_guru']; ?>">
+                      <input type="hidden" name="penerima" value="<?php echo $daftar_pesan['id_pengirim']; ?>">
                       <input type="hidden" name="kelas" value="<?php echo $daftar_pesan['id_kelas']; ?>">
 
                       <textarea name="isi_pesan" id="ckeditor" class="form-control" rows="5">Tulis Pesan</textarea>
@@ -224,7 +225,7 @@ echo '</div> ';
             // tampilkan data guru
             $sqlGuru = mysqli_query($con, "SELECT * FROM tb_guru WHERE id_guru='$role[id_guru]'");
             while ($guru = mysqli_fetch_array($sqlGuru)) {
-              echo "<option value='$guru[kode_guru]'>$guru[nama_guru]</option>";
+              echo "<option value='$guru[id_guru]'>$guru[nama_guru]</option>";
             }
             ?>
 
@@ -238,7 +239,7 @@ echo '</div> ';
 
       </div>
       <div class="form-group">
-        <input type="hidden" name="idpengirim" value="<?php echo "$_SESSION[id_siswa]"; ?>">
+        <input type="hidden" name="idpengirim" value="<?php echo "$_SESSION[Siswa]"; ?>">
         <textarea name="pesan" class="form-control" rows="5" id="ckeditor1">Tulis Pesan</textarea>
       </div>
       <div class="form-group">

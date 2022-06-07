@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-    <h4> <b>Master</b> <small class="text-muted">/ Kelas</small>
+    <h4> <b>DATA MASTER</b> <small class="text-muted">(CLASS)</small>
     </h4>
     <hr>
     <div class="row">

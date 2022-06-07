@@ -18,10 +18,8 @@ $ujian = $objektif + $essay;
 <div class="content-wrapper">
   <h3>
     <!-- <img class="menu-icon" src="../vendor/images/menu_icons/01.png" width="20"> -->
-    <b>Dashboard</b>
-    <small class="text-muted">/
-      Guru
-    </small>
+    <b>HOME</b>
+    <small class="text-muted">(Guru)</small>
   </h3>
   <hr>
   <div class="row">
@@ -37,7 +35,7 @@ $ujian = $objektif + $essay;
                   <i class="fa fa-globe icon-lg"></i>
                 </div>
                 <div class="float-right">
-                  <p class="card-text text-right font-weight-bold text-white">Jumlah Pelajaran</p>
+                  <p class="card-text text-right font-weight-bold text-white">Jumlah Class & Mata Pelajaran</p>
                   <div class="fluid-container">
                     <h3 class="card-title font-weight-bold text-center mb-0"><?= $mapel; ?></h3>
                   </div>
@@ -169,7 +167,7 @@ $ujian = $objektif + $essay;
           // query pesan
 
           $query_daftar_pesan = mysqli_query($con, "SELECT P.*, M.username, M.nama_siswa,M.foto,M.id_kelas
-  FROM pesan P, tb_siswa M WHERE P.id_pengirim=M.username AND P.id_penerima='$data[nik]' AND P.id_kelas='$rg[id_kelas]' ORDER BY P.id_pesan DESC");
+  FROM pesan P, tb_siswa M WHERE P.id_pengirim=M.id_siswa AND P.id_penerima='$data[id_guru]' AND P.id_kelas='$rg[id_kelas]' ORDER BY P.id_pesan DESC");
 
           while ($daftar_pesan = mysqli_fetch_array($query_daftar_pesan)) {
             $kelas = mysqli_query($con, "SELECT kelas FROM tb_master_kelas WHERE id_kelas='$daftar_pesan[id_kelas]' ");
@@ -209,9 +207,9 @@ $ujian = $objektif + $essay;
                         </div>
                         <p></p>
                         <div class="form-group">
-                          <input type="hidden" name="pengirim" value="<?php echo $data['nik']; ?>">
+                          <input type="hidden" name="pengirim" value="<?php echo $data['id_guru']; ?>">
                           <input type="hidden" name="status" value="<?php echo $daftar_pesan['id_pesan']; ?>">
-                          <input type="hidden" name="penerima" value="<?php echo $daftar_pesan['nis']; ?>">
+                          <input type="hidden" name="penerima" value="<?php echo $daftar_pesan['id_pengirim']; ?>">
                           <input type="hidden" name="kelas" value="<?php echo $daftar_pesan['id_kelas']; ?>">
                           <textarea name="isi_pesan" id="ckeditor" class="form-control" rows="5">Tulis Pesan</textarea>
                         </div>
@@ -273,7 +271,7 @@ $ujian = $objektif + $essay;
             INNER JOIN tb_master_kelas ON tb_roleguru.id_kelas=tb_master_kelas.id_kelas
             WHERE tb_roleguru.id_guru='$sesi' GROUP BY tb_roleguru.id_kelas");
               while ($mapel = mysqli_fetch_array($sqlMapel)) {
-                echo "<option value='$mapel[id_roleguru]'>Kelas $mapel[kelas]</option>";
+                echo "<option value='$mapel[id_kelas]'>Kelas $mapel[kelas]</option>";
               }
               ?>
             </select>
@@ -282,7 +280,7 @@ $ujian = $objektif + $essay;
             <input type="hidden" name="idkelas" id="id_kelas">
           </div>
           <div class="form-group">
-            <input type="hidden" name="idpengirim" value="<?php echo $data['nik']; ?>">
+            <input type="hidden" name="idpengirim" value="<?php echo $data['id_guru']; ?>">
             <textarea name="pesan" class="form-control" rows="5" id="ckeditor1">Tulis Pesan</textarea>
           </div>
           <div class="form-group">

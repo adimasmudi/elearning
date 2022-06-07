@@ -2,7 +2,7 @@
 $edit = mysqli_query($con, "SELECT * FROM tb_guru WHERE id_guru='$_GET[id]' ");
 foreach ($edit as $d) ?>
 <div class="content-wrapper">
-  <h4> <b>User</b> <small class="text-muted">/ Edit Guru</small>
+  <h4> <b>Admin</b> <small class="text-muted">(Edit Guru)</small>
   </h4>
   <hr>
   <div class="row">

@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-    <h4> <b>Admin</b> <small class="text-muted">/ Guru</small>
+    <h4> <b>ADMIN</b> <small class="text-muted">(Guru)</small>
     </h4>
     <hr>
     <div class="row">

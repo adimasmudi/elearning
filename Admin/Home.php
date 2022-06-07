@@ -7,23 +7,23 @@ $oke = mysqli_query($con, "SELECT * from tb_admin WHERE id_admin='$sesi'");
 $oke1 = mysqli_fetch_array($oke);
 ?>
 <div class="content-wrapper">
-  <h3> <b>Home</b> <small class="text-muted">/Admin</small>
+  <h3> <b>HOME</b> <small class="text-muted">(Admin)</small>
   </h3>
   <hr>
   <div class="row">
 
     <div class="col-md-9">
-      <div class="container" style="background-color:white">
+      <div class="container" style="background-color:white;">
         <div class="row">
           <div class="col">
             <div class="card">
               <div class="card-body">
 
                 <h3>
-                  <strong>SELAMAT DATANG</strong><br>
-                  <?php echo $oke1['nama_lengkap']; ?> <span style="font-weight:normal">DI APLIKASI ONLINE CLASS M'TECH <br>
-                    LEMBAGA KURSUS CV. MADURA TECHNOVATION </span>
-
+                  <strong><center><h1>SELAMAT DATANG</h1></center></strong><br>
+                  <center><h2><?php echo $oke1 ['nama_lengkap']; ?> DI APLIKASI ONLINE CLASS M'TECH</h2></center>
+                  <span style="font-weight:normal">
+                  <br><center><h2>LEMBAGA KURSUS CV. MADURA TECHNOVATION</h2></center></span>
                 </h3>
 
 

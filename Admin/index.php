@@ -48,7 +48,7 @@ if (@$_SESSION['Admin']) {
       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-left col-lg-6" style="background-color: #517fd4">
           <a class="navbar-brand brand-logo" href="index.php" style="font-family:Aegyptus;font-weight: bold;font-size: 30px;">
-            <img src="../vendor/images/MTC.png" class="animated-logo" alt="logo" style="height: 45px;width: 45px;border-radius: 10px;"> <b style="color:#fff">M'TECH ONLINE CLASS</b>
+            <img src="../vendor/images/MTC.png" class="animated-logo" alt="logo" style="height: 45px;width: 45px;border-radius: 10px;"> <b style="color:#fff">ONLINE CLASS M'TECH</b>
 
 
           </a>
@@ -140,7 +140,7 @@ if (@$_SESSION['Admin']) {
 
                   <li class="nav-item">
                     <a class="nav-link" href="?page=mapel" style="color:#fff;">
-                      <i class="fa fa-angle-double-right" style="font-size:20px;color:#fff;"></i> &nbsp;<span class="menu-title">Master Matpel</span></a>
+                      <i class="fa fa-angle-double-right" style="font-size:20px;color:#fff;"></i> &nbsp;<span class="menu-title">Master Subject Matter</span></a>
                   </li>
 
                   <li class="nav-item">

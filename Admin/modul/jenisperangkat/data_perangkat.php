@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-    <h4> <b>Master</b> <small class="text-muted">/ Library</small>
+    <h4> <b>DATA MASTER</b> <small class="text-muted">(Library)</small>
     </h4>
     <hr>
     <div class="row">
@@ -9,13 +9,13 @@
                     <p class="card-description">
                         <a data-toggle="modal" data-target="#add" class="btn btn-info text-white pull-right"><i class="fa fa-plus"></i> Add Jenis</a> <br>
                     </p>
-                    <h4 class="card-title">Data Library</h4>
+                    <h4 class="card-title">Data Jenis Perangkat Perpustakaan</h4>
                     <div class="table-responsive">
                         <table class="table table-condensed table-striped table-hover" id="data">
                             <thead class="bg-dark text-white">
                                 <tr>
                                     <th>No.</th>
-                                    <th>Jenis Library</th>
+                                    <th>Jenis Perangkat</th>
                                     <th>Opsi</th>
                                 </tr>
                             </thead>
@@ -36,12 +36,12 @@
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h4 class="modal-title"> Edit Jenis library </h4>
+                                                            <h4 class="modal-title"> Edit Jenis Perangkat </h4>
                                                         </div>
                                                         <form action="" method="post">
                                                             <div class="modal-body">
                                                                 <div class="form-group">
-                                                                    <label for="mapel"> Jenis library</label>
+                                                                    <label for="mapel"> Jenis Perangkat</label>
                                                                     <input type="hidden" name="id" value="<?= $d['id_jenisperangkat'] ?>">
                                                                     <input type="text" id="mapel" name="jenis" class="form-control" value="<?= $d['jenis_perangkat'] ?>">
                                                                 </div>

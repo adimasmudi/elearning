@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-    <h4> <b>Master</b> <small class="text-muted">/ Jenis Ujian</small>
+    <h4> <b>DATA MASTER</b> <small class="text-muted">(Exam)</small>
     </h4>
     <hr>
     <div class="row">

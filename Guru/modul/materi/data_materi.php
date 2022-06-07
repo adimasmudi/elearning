@@ -1,6 +1,6 @@
   <div class="content-wrapper">
     <h4>
-      Materi
+      MATERI (Guru)
     </h4>
     <hr>
 

@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-  <h4> <b>Tugas Siswa</b> <small class="text-muted">/</small>
+  <h4> <b>ATUR TUGAS SISWA</b> <small class="text-muted">(Guru)</small>
   </h4>
   <hr>
 

@@ -1,6 +1,6 @@
 <div class="content-wrapper">
   <h4>
-    Mata Pelajaran <small class="text-muted">/ Tambah</small>
+    Kelas & Mata Pelajaran <small class="text-muted">/ Tambah</small>
   </h4>
   <hr>
   <div class="row">
@@ -10,7 +10,7 @@
         <div class="col-12 col-xs-12">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Mata Pelajaran</h4>
+              <h4 class="card-title">Kelas & Mata Pelajaran</h4>
               <p class="card-description">
                 <!-- Basic form layout -->
               </p>

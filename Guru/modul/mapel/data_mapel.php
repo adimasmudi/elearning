@@ -1,6 +1,6 @@
   <div class="content-wrapper">
     <h4>
-      Mata Pelajaran
+      KELAS & MATA PELAJARAN (Guru)
     </h4>
     <hr>
     <?php
@@ -9,8 +9,8 @@
       <div class="row purchace-popup">
         <div class="col-md-12">
           <span class="d-flex alifn-items-center">
-            <p>Saat ini Anda belum memilih Mata Pelajaran, Silahkan Tambahkan Mata Pelajaran Untuk Memulai .</p>
-            <a href="?page=mapel&act=add" class="btn ml-auto purchase-button"> <i class="fa fa-plus"></i> Tambah Mata Pelajaran</a>
+            <p>Saat ini Anda belum memilih Kelas & Mata Pelajaran, Silahkan Tambahkan Kelas & Mata Pelajaran Untuk Memulai .</p>
+            <a href="?page=mapel&act=add" class="btn ml-auto purchase-button"> <i class="fa fa-plus"></i> Tambah Kelas & Mata Pelajaran</a>
             <i class="mdi mdi-close popup-dismiss"></i>
           </span>
         </div>
@@ -22,7 +22,7 @@
       <div class="row purchace-popup">
         <div class="col-md-12">
           <span class="d-flex alifn-items-center">
-            <a href="?page=mapel&act=add" class="btn btn-dark"> <i class="fa fa-plus"></i> Add Mata Pelajaran</a>
+            <a href="?page=mapel&act=add" class="btn btn-dark"> <i class="fa fa-plus"></i> Add Kelas & Mata Pelajaran</a>
           </span>
         </div>
       </div>

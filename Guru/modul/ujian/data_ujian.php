@@ -1,8 +1,7 @@
 <div class="content-wrapper">
   <h4>
-    <b>EVALUASI</b>
-    <small class="text-muted">/
-      UJIAN
+    <b>UJIAN SISWA OBJECTIVE</b>
+    <small class="text-muted">(Guru)
     </small>
   </h4>
   <div class="row purchace-popup">
