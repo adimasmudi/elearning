@@ -13,7 +13,7 @@ WHERE tb_tugas.id_guru='$sesi' AND tb_tugas.id_tugas='$_GET[tugas]' ");
 foreach ($sqldataTugas as $t)
 ?>
 <div class="content-wrapper">
-	<h4> <b>TUGAS</b> <small class="text-muted">/ KELAS <b><?php echo $k['kelas']; ?></b></small>
+	<h4> <b>TUGAS</b> <small class="text-muted">(KELAS) <b><?php echo $k['kelas']; ?></b></small>
 	</h4>
 	<hr>
 	<div class="row purchace-popup">

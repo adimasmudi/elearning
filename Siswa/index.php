@@ -217,8 +217,6 @@ if (@$_SESSION['Siswa']) {
               include 'modul/materi/data_materi.php';
             } elseif ($act == 'mapel') {
               include 'modul/materi/view_mapel.php';
-            } elseif ($act == 'semester') {
-              include 'modul/materi/view_semester.php';
             }
           } elseif ($page == 'profil') {
             if ($act == '') {
@@ -253,7 +251,7 @@ if (@$_SESSION['Siswa']) {
             // include 'Home.php';
           ?>
             <div class="content-wrapper">
-              <h3> <b>Dashboard</b> <small class="text-muted">/Siswa</small>
+              <h3> <b>Dashboard</b> <small class="text-muted">(Siswa)</small>
               </h3>
               <hr>
               <div class="row">

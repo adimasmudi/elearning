@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-  <h4> <b>Tugas</b> <small class="text-muted">/Informasi Tugas</small>
+  <h4> <b>Tugas</b> <small class="text-muted">(Informasi Tugas)</small>
   </h4>
   <hr>
   <div class="row">

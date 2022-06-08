@@ -13,8 +13,8 @@ $data_mapel = mysqli_fetch_assoc($sqlmtr);
   <h4>
     <!-- <img class="menu-icon" src="../vendor/images/menu_icons/01.png" width="20"> -->
     <b>MATERI PELAJARAN</b>
-    <small class="text-muted">/
-      <!-- Guru --> <b style="color: #00BCD4;">KELAS [ <?= $data_mapel == null ? 'X' : $data_mapel['kelas']; ?> ]</b>
+    <small class="text-muted">
+      <!-- Guru --> <b style="color: #00BCD4;">(KELAS [ <?= $data_mapel == null ? 'X' : $data_mapel['kelas']; ?> ])</b>
     </small>
   </h4>
   <hr>

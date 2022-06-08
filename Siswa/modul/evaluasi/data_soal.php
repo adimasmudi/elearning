@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-  <h4> <b>Evaluasi</b> <small class="text-muted">/Soal</small>
+  <h4> <b>Evaluasi</b> <small class="text-muted">(Soal)</small>
   </h4>
   <hr>
   <div class="row">
