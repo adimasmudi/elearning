@@ -36,7 +36,7 @@ if (@$_SESSION['Siswa']) {
     <!-- inject:css -->
     <link rel="stylesheet" href="../vendor/css/style.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="../vendor/images/favicon.png" />
+    <link rel="shortcut icon" href="../vendor/images/MTC.png" />
     <link href="../vendor/sweetalert/sweetalert.css" rel="stylesheet" />
     <script src="../vendor/js/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/jquery/jquery-2.0.2.min.js"></script>
@@ -126,7 +126,7 @@ if (@$_SESSION['Siswa']) {
             </li>
 
             <li class="nav-item d-none d-lg-block">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="?page=profil">
                 <b>My Profile</b>
                 <img class="img-xs rounded-circle" src="../vendor/images/img_Siswa/<?= $data['foto']; ?>" alt="">
               </a>
@@ -156,28 +156,21 @@ if (@$_SESSION['Siswa']) {
               <a class="nav-link" href="index.php"><img class="menu-icon" src="../vendor/images/menu_icons/01.png" alt="menu icon"><span class="menu-title">DASHBOARD</span></a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="?page=profil"><img class="menu-icon" src="../vendor/images/menu_icons/10.png" alt="menu icon"> <span class="menu-title">My Profil</span></a>
-            </li>
+
 
 
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#menuMateri" aria-expanded="false" aria-controls="general-pages"> <img class="menu-icon" src="../vendor/images/menu_icons/04.png" alt="menu icon"> <span class="menu-title">MATERI</span><i class="menu-arrow"></i>
-              </a>
-              <div class="collapse" id="menuMateri">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="?page=materi"><img class="menu-icon" src="../vendor/images/menu_icons/04.png" alt="menu icon">ALL MATERI</a>
-                  </li>
-                </ul>
-              </div>
+              <a class="nav-link" href="?page=materi"><i class="fa fa-leanpub" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MATERI</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="?page=tugas"><img class="menu-icon" src="../vendor/images/menu_icons/04.png" alt="menu icon"> <span class="menu-title">TUGAS </span></a>
+              <a class="nav-link" href="?page=library"><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="menu-title">LIBRARY </span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?page=tugas"><i class="fa fa-pencil"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="menu-title">TUGAS </span></a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#menuEvaluasi" aria-expanded="false" aria-controls="general-pages"> <img class="menu-icon" src="../vendor/images/menu_icons/04.png" alt="menu icon"> <span class="menu-title">EVALUASI</span><i class="menu-arrow"></i>
+              <a class="nav-link" data-toggle="collapse" href="#menuEvaluasi" aria-expanded="false" aria-controls="general-pages"> <i class="fa fa-pencil-square" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="menu-title">EVALUASI</span><i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="menuEvaluasi">
                 <ul class="nav flex-column sub-menu">
@@ -222,6 +215,8 @@ if (@$_SESSION['Siswa']) {
             if ($act == '') {
               include 'modul/profil/data_profil.php';
             }
+          } else if ($page == 'library') {
+            include 'modul/library/data_library.php';
           } elseif ($page == 'evaluasi') {
             if ($act == '') {
               include 'modul/evaluasi/data_soal.php';

@@ -28,10 +28,10 @@ $data_mapel = mysqli_fetch_assoc($sqlmtr);
             <table class="table table-condensed table-striped table-hoverlight">
               <thead>
                 <tr>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
+                  <th>No</th>
+                  <th>Mata Pelajaran</th>
+                  <th>Judul materi</th>
+                  <th>Action</th>
 
                 </tr>
               </thead>
@@ -157,7 +157,7 @@ $data_mapel = mysqli_fetch_assoc($sqlmtr);
                 <?php } ?>
               </tbody>
 
-              <tr style="background-color: #fff; font-weight: bold;height: 40px;border-top: 2px solid black;">
+              <tr class="mt-4" style="background-color: #fff; font-weight: bold;height: 40px;border-top: 2px solid black;">
                 <td>Jumlah</td>
                 <td colspan="4">( <?= $jml; ?> )</td>
               </tr>

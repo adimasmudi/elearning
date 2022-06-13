@@ -130,10 +130,8 @@
                 <?php
                 $essayUjian = mysqli_query($con, "SELECT * FROM kelas_ujianessay 
     INNER JOIN tb_master_kelas ON kelas_ujianessay.id_kelas=tb_master_kelas.id_kelas
-    INNER JOIN tb_master_jurusan ON kelas_ujianessay.id_jurusan=tb_master_jurusan.id_jurusan
     INNER JOIN ujian_essay ON kelas_ujianessay.id_ujianessay=ujian_essay.id_ujianessay
     INNER JOIN tb_master_mapel ON ujian_essay.id_mapel=tb_master_mapel.id_mapel
-    INNER JOIN tb_master_semester ON ujian_essay.id_semester=tb_master_semester.id_semester
 
     WHERE ujian_essay.tanggal='$tgl' AND ujian_essay.id_ujianessay=kelas_ujianessay.id_ujianessay AND kelas_ujianessay.id_kelas='$_SESSION[kelas]' AND kelas_ujianessay.id_jurusan='$_SESSION[jurusan]' AND kelas_ujianessay.aktif='Y'
     ");
@@ -168,11 +166,7 @@
                                   <td>:</td>
                                   <td><b><?php echo $e['mapel']; ?></b> </td>
                                 </tr>
-                                <tr>
-                                  <td>SEMESTER</td>
-                                  <td>:</td>
-                                  <td><b><?php echo $e['semester']; ?></b> </td>
-                                </tr>
+
                               </table>
                             </div>
                             <div class="modal-body" style="overflow: scroll;height: 500px;background-color: #fff;margin-left: 50px;">

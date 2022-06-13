@@ -32,7 +32,7 @@
                     <?php if ($tnilai > 0 and $rnilai['nilai'] != "") { ?>
                       <a data-toggle="modal" data-target="#myModal<?php echo $s['id_ujian'] ?>" href="<?php echo $s['id_ujian'] ?>" class="badge badge-pill badge-info" style="font-size: 14px;">
                         <i class="fa fa-pencil"></i>
-                        <?= $s['judul'] ?> - <?= $s['mapel'] ?> - <?= $s['semester'] ?>
+                        <?= $s['judul'] ?> - <?= $s['mapel'] ?> ?>
                       </a> <?php } ?>
                     <!-- Modal -->
                     <div class="modal fade bs-example-modal-lg" id="myModal<?php echo $s['id_ujian'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -48,11 +48,7 @@
                                 <td>:</td>
                                 <td><b><?php echo $s['mapel']; ?></b> </td>
                               </tr>
-                              <tr>
-                                <td>SEMESTER</td>
-                                <td>:</td>
-                                <td><b><?php echo $s['semester']; ?></b> </td>
-                              </tr>
+
                             </table>
                           </div>
                           <div class="modal-body" style="overflow: scroll;height: 500px;background-color: #fff;margin-left: 50px;">
@@ -106,7 +102,7 @@
                 <tr>
                   <td width="50"><b><?= $noe++; ?>.</b></td>
                   <td><a data-toggle="modal" data-target="#soalEssay<?php echo $s['id_ujianessay'] ?>" href="<?php echo $s['id_ujianessay'] ?>" class="badge badge-pill badge-primary" style="font-size: 14px;"> <i class="fa fa-pencil"></i>
-                      <?= $s['mapel'] ?> - <?= $s['semester'] ?>
+                      <?= $s['mapel'] ?>
                     </a>
                     <!-- Modal -->
                     <div class="modal fade bs-example-modal-lg" id="soalEssay<?php echo $s['id_ujianessay'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -122,11 +118,7 @@
                                 <td>:</td>
                                 <td><b><?php echo $s['mapel']; ?></b> </td>
                               </tr>
-                              <tr>
-                                <td>SEMESTER</td>
-                                <td>:</td>
-                                <td><b><?php echo $s['semester']; ?></b> </td>
-                              </tr>
+
                             </table>
                           </div>
                           <div class="modal-body" style="overflow: scroll;height: 500px;background-color: #fff;margin-left: 50px;">

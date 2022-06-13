@@ -21,7 +21,7 @@
 
                 <form class="forms-sample" method="post" action="?page=proses" enctype="multipart/form-data">
                   <div class="form-group">
-                    <label>Nis</label>
+                    <label>Username</label>
                     <input type="hidden" name="ID" value="<?= $data['id_siswa'] ?>">
                     <input type="text" class="form-control" name="nis" value="<?= $data['username'] ?>">
                   </div>

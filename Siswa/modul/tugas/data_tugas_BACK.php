@@ -35,7 +35,6 @@
  INNER JOIN tb_jenistugas ON tb_tugas.id_jenistugas=tb_jenistugas.id_jenistugas
  INNER JOIN tb_guru ON tb_tugas.id_guru=tb_guru.id_guru
   INNER JOIN tb_master_mapel ON tb_tugas.id_mapel=tb_master_mapel.id_mapel
-   INNER JOIN tb_master_semester ON tb_tugas.id_semester=tb_master_semester.id_semester
    WHERE tb_tugas.id_tugas='$d[id_tugas]' ORDER BY tb_tugas.id_tugas DESC ");
                 foreach ($ujian as $t) { ?>
                   <div class="col-md-6 col-xs-12">
