@@ -242,9 +242,7 @@ if (@$_SESSION['Siswa']) {
           } elseif ($page == 'proses') {
             include 'modul/models.php';
             include '../media/story.html';
-          } elseif ($page == '') {
-            // include 'Home.php';
-          ?>
+          } elseif ($page == '') { ?>
             <div class="content-wrapper">
               <h3> <b>Dashboard</b> <small class="text-muted">(Siswa)</small>
               </h3>
@@ -254,13 +252,18 @@ if (@$_SESSION['Siswa']) {
                   <div class="card">
                     <div class="card-body">
 
-                      <div id="isi"> </div>
+                      <div id="isi">
+                        <?php include 'home.php'; ?>
+                      </div>
 
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+
+
 
           <?php
           } else {

@@ -13,7 +13,7 @@
 
 
           <?php
-          session_start();
+
           include "../config/db.php";
           //Cek jumlah ujian pada tanggal sekarang
           $tgl = date('Y-m-d');
@@ -44,11 +44,10 @@
 
             $qujian = mysqli_query($con, "SELECT * FROM kelas_ujian 
       INNER JOIN tb_master_kelas ON kelas_ujian.id_kelas=tb_master_kelas.id_kelas
-      INNER JOIN tb_master_jurusan ON kelas_ujian.id_jurusan=tb_master_jurusan.id_jurusan
       INNER JOIN ujian ON kelas_ujian.id_ujian=ujian.id_ujian
       INNER JOIN tb_master_mapel ON ujian.id_mapel=tb_master_mapel.id_mapel
 
-    WHERE ujian.tanggal='$tgl' AND ujian.id_ujian=kelas_ujian.id_ujian AND kelas_ujian.id_kelas='$_SESSION[kelas]' AND kelas_ujian.id_jurusan='$_SESSION[jurusan]' AND kelas_ujian.aktif='Y'
+    WHERE ujian.tanggal='$tgl' AND ujian.id_ujian=kelas_ujian.id_ujian AND kelas_ujian.id_kelas='$_SESSION[kelas]' AND kelas_ujian.aktif='Y'
     ");
             $no = 1;
             while ($r = mysqli_fetch_array($qujian)) {

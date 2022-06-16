@@ -9,7 +9,7 @@
   					<div class="table-responsive">
   						<?php
 							session_start();
-							include "../config/koneksi.php";
+							include "../config/db.php";
 							?>
 
 

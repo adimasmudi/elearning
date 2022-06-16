@@ -89,7 +89,7 @@
           </table>
           <hr>
           <!-- <p><b>KUMPULAN SOAL ESSAY</b></p>-->
-
+          <p><b>KUMPULAN SOAL ESSAY</b></p>
           <table class="table">
             <tbody>
               <?php

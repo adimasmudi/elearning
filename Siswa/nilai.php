@@ -1,14 +1,13 @@
 <?php
 session_start();
-include "../config/koneksi.php";
+include "../config/db.php";
 
-$kelas = mysqli_fetch_array(mysqli_query($mysqli, "SELECT * FROM tb_master_kelas WHERE id_kelas='$_SESSION[kelas]'"));
-$jur = mysqli_fetch_array(mysqli_query($mysqli, "SELECT * FROM tb_master_jurusan WHERE id_jurusan='$_SESSION[jurusan]'"));
-$mapel = mysqli_fetch_array(mysqli_query($mysqli, "SELECT * FROM ujian
+$kelas = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM tb_master_kelas WHERE id_kelas='$_SESSION[kelas]'"));
+$mapel = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM ujian
   INNER JOIN tb_master_mapel ON ujian.id_mapel=tb_master_mapel.id_mapel
  WHERE id_ujian='$_GET[ujian]'"));
-$soal = mysqli_fetch_array(mysqli_query($mysqli, "SELECT * FROM soal WHERE id_ujian='$_GET[ujian]'"));
-$nilai = mysqli_fetch_array(mysqli_query($mysqli, "SELECT * FROM nilai WHERE id_ujian='$_GET[ujian]' AND id_siswa='$_SESSION[id_siswa]'"));
+$soal = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM soal WHERE id_ujian='$_GET[ujian]'"));
+$nilai = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM nilai WHERE id_ujian='$_GET[ujian]' AND id_siswa='$_SESSION[id_siswa]'"));
 
 ?>
 <div class="grup" style="width:95%; margin:0 auto; margin-top:25px">
@@ -86,11 +85,11 @@ $nilai = mysqli_fetch_array(mysqli_query($mysqli, "SELECT * FROM nilai WHERE id_
                 </thead>
                 <tbody>";
 
-      $tampil = mysqli_query($mysqli, "SELECT * FROM nilai 
+      $tampil = mysqli_query($con, "SELECT * FROM nilai 
                            WHERE  id_ujian='$_GET[ujian]' ORDER BY jml_benar  DESC LIMIT 10");
       $no = 1;
       while ($r = mysqli_fetch_array($tampil)) {
-        $siswa = mysqli_fetch_array(mysqli_query($mysqli, "SELECT * FROM tb_siswa WHERE id_siswa='$r[id_siswa]'"));
+        $siswa = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM tb_siswa WHERE id_siswa='$r[id_siswa]'"));
         echo "<tr>
         <td>$no</td>
         <td>$siswa[nama_siswa]</td>
