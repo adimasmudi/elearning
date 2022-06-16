@@ -264,7 +264,7 @@ $ujian = $objektif + $essay;
         <form action="" method="post">
           <div class="form-group">
 
-            <select class="form-control" name="id_roleguru" onchange="cek_database()" id="id_roleguru" style="font-weight: bold;font-size: 16px; border-radius: 10px;" required>
+            <select class="form-control" name="penerima" onchange="cek_database()" id="id_roleguru" style="font-weight: bold;font-size: 16px; border-radius: 10px;" required>
               <option>Kirim Ke</option>
               <?php
               $sqlMapel = mysqli_query($con, "SELECT * FROM tb_roleguru
@@ -292,7 +292,7 @@ $ujian = $objektif + $essay;
         if (isset($_POST['sendMassageMassal'])) {
           $tanggal = date('Y-m-d');
           $send = mysqli_query($con, "INSERT INTO pesan 
-                  VALUES('null','$_POST[idpengirim]','$_POST[penerima]','$tanggal','$_POST[pesan]','belum','$_POST[idkelas]')");
+                  VALUES('null','$_POST[idpengirim]','$_POST[penerima]','$tanggal','$_POST[pesan]','belum','$_POST[penerima]')");
           if ($send) {
             echo "
                   <script> 
