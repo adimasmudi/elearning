@@ -32,7 +32,7 @@ INNER JOIN tb_master_mapel ON ujian.id_mapel=tb_master_mapel.id_mapel
         </tr>
         <tr>
           <td>Kelas</td>
-          <td><b><?= $kelas['kelas']; ?> - <?= $kelas['jurusan']; ?></b></td>
+          <td><b><?= $kelas['kelas']; ?></b></td>
         </tr>
         <tr>
           <td>Pelajaran</td>

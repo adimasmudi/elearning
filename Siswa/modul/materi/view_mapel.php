@@ -73,7 +73,7 @@
 
                             <h4 class="modal-title">
                               MATERI PEMBELAJARAN <br>
-                              <img class="menu-icon" src="../vendor/images/menu_icons/04.png" alt="menu icon"> <b> <?= $row['judul_materi']; ?></b> | <?= $row['mapel']; ?> KELAS <?= $row['kelas']; ?>-<?= $row['jurusan']; ?>
+                              <img class="menu-icon" src="../vendor/images/menu_icons/04.png" alt="menu icon"> <b> <?= $row['judul_materi']; ?></b> | <?= $row['mapel']; ?> KELAS <?= $row['kelas']; ?>
                             </h4>
                             <hr>
                           </div>

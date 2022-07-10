@@ -19,7 +19,6 @@
 							$qujian = mysqli_query($con, "SELECT * FROM ujian t1, kelas_ujian t2 WHERE t1.id_ujian=t2.id_ujian AND t2.id_kelas='$_SESSION[kelas]' AND t2.aktif='Y'");
 							$tujian = mysqli_num_rows($qujian);
 							$rujian = mysqli_fetch_array($qujian);
-
 							//Jika tidak ada ujian aktif tampilkan pesan
 							if ($tujian < 1) {
 								echo '
@@ -35,6 +34,7 @@
   									<th>Judul</th>
   									<th>Pelajaran</th>
   									<th>Jenis Ujian</th>
+									<th>Tanggal</th>
   									<th>Aksi</th>
   								</tr>
   							</thead>
@@ -45,10 +45,12 @@
       INNER JOIN ujian ON kelas_ujian.id_ujian=ujian.id_ujian
       INNER JOIN tb_master_mapel ON ujian.id_mapel=tb_master_mapel.id_mapel
 
-    WHERE ujian.tanggal='$tgl' AND ujian.id_ujian=kelas_ujian.id_ujian AND kelas_ujian.id_kelas='$_SESSION[kelas]' AND kelas_ujian.aktif='Y'
+    WHERE ujian.id_ujian=kelas_ujian.id_ujian AND kelas_ujian.id_kelas='$_SESSION[kelas]' AND kelas_ujian.aktif='Y'
     ");
 									$no = 1;
+									
 									while ($r = mysqli_fetch_array($qujian)) { ?>
+									
   									<tr>
   										<td> <?= $no++; ?>. </td>
   										<td><?= $r['judul'] ?></td>
@@ -68,6 +70,9 @@
 												?>
   											<?= $j['jenis_ujian'] ?>
   										</td>
+										<td>
+											<?= $r['tanggal']; ?>
+										</td>
   										<td bgcolor="#00BCD4" style="color:#fff;">
   											<a data-toggle="modal" data-target="#viewNilai<?= $m['id_ujian'] ?>" class="btn btn-block" style="font-weight:bold;"><i class="fa fa-search"></i> Lihat Nilai</a>
   											<!-- Modal -->
@@ -85,12 +90,7 @@
 																	foreach ($nilai as $n)
 																	?>
   																<table class="table table-striped">
-  																	<thead>
-  																		<tr>
-  																			<th>NIS</th>
-  																			<th><b><?= $_SESSION['nis']; ?> </b></th>
-  																		</tr>
-  																	</thead>
+  																	
   																	<tbody>
   																		<tr>
   																			<td>Nama</td>

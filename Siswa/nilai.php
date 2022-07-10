@@ -63,62 +63,7 @@ $nilai = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM nilai WHERE id_uji
       </Center>
     </div>
   </div>
-  <div class="kanan">
-
-    <div id="myerror" class="alert alert-info" role="alert" style="font-size: 13px; font-style:normal; font-weight:normal">
-
-      <font size="3px">Rengking 10 Besar </font>
-    </div>
-
-
-    <div id="myerror" class="alert alert-info" role="alert" style="font-size: 13px; font-style:normal; font-weight:normal">
-
-      <?php
-
-      echo "<table id='example1' class='table table-bordered table-striped'>
-                <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Nama</th>
-                  <th>Nilai</th>
-                  </tr>
-                </thead>
-                <tbody>";
-
-      $tampil = mysqli_query($con, "SELECT * FROM nilai 
-                           WHERE  id_ujian='$_GET[ujian]' ORDER BY jml_benar  DESC LIMIT 10");
-      $no = 1;
-      while ($r = mysqli_fetch_array($tampil)) {
-        $siswa = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM tb_siswa WHERE id_siswa='$r[id_siswa]'"));
-        echo "<tr>
-        <td>$no</td>
-        <td>$siswa[nama_siswa]</td>
-		<td>$r[nilai]</td>
-	</tr>";
-
-        $no++;
-      }
-      echo "</tbody>
-                <tfoot>
-                <tr>
-				<th>No</th>
-                  <th>Nama</th>
-                  <th>Nilai</th>
-				
-				 </tr>
-                </tfoot>
-              </table>";
-
-
-
-
-
-
-      ?>
-
-    </div>
-
-  </div>
+  
 
 
 

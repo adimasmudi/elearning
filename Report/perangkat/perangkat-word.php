@@ -1,0 +1,89 @@
+<?php
+include '../../config/db.php';
+
+session_start();
+if (@$_SESSION['Guru']) {
+?>
+<?php
+if (@$_SESSION['Guru']) {
+$sesi = @$_SESSION['Guru'];
+}
+// SESION GURU
+$sql = mysqli_query($con,"SELECT * FROM tb_guru WHERE id_guru = '$sesi'") or die(mysqli_error($con));
+$data = mysqli_fetch_array($sql);
+
+
+// Tampilkan Perangkat Pembelajaran
+$sqlPerangkat = mysqli_query($con,"SELECT * FROM tb_perangkat
+                      INNER JOIN tb_roleguru ON tb_perangkat.id_roleguru=tb_roleguru.id_roleguru
+
+                      INNER JOIN tb_master_mapel ON tb_roleguru.id_mapel=tb_master_mapel.id_mapel
+
+                      INNER JOIN tb_master_kelas ON tb_roleguru.id_kelas=tb_master_kelas.id_kelas
+
+                      INNER JOIN tb_jenisperangkat ON tb_perangkat.id_jenisperangkat=tb_jenisperangkat.id_jenisperangkat WHERE tb_perangkat.id_perangkat='$_GET[ID]'");
+$d = mysqli_fetch_array( $sqlPerangkat);
+ $time = time();
+      header("Content-Type: application/vnd.msword");
+      header("Expires: 0");
+      header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+      header("content-disposition: attachment;filename=PERANGKAT_$time.doc");
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+         @page{
+        size: A4;
+        margin: 0;
+      }
+
+		}		
+
+	</style>
+</head>
+<body>
+	<center>
+		<h3>PERANGKAT PEMBELAJARAN <br><?=$d['jenis_perangkat']; ?></h3>
+	</center>
+
+<table cellpadding="3">
+    <tr>
+			<td>Nama Guru</td>
+			<td>:</td>
+			<td><?=$data['nama_guru']; ?> </td>
+		</tr>
+		<tr>
+			<td>MATA PELAJARAN</td>
+			<td>:</td>
+			<td><?=$d['mapel']; ?> </td>
+		</tr>
+		<tr>
+			<td>KELAS / SEMESTER</td>
+			<td>:</td>
+			<td><?=$d['kelas']; ?></td>
+		</tr>
+</table>
+<hr>
+
+<?=$d['isi_perangkat']; ?>
+
+
+
+</body>
+</html>
+
+
+<?php
+} else{
+
+
+
+echo "<script>
+alert('Anda tidak berhak Akses File Ini !!');
+window.location='../../index.php';</script>";
+
+}

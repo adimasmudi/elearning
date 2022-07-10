@@ -222,9 +222,7 @@ if (@$_SESSION['Guru']) {
             <li class="nav-item">
               <a class="nav-link" href="?page=ujian"><i class="fa fa-check" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="menu-title">OBJEKTIF</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="?page=essay"><i class="fa fa-pencil" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="menu-title">ESSAY</span></a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" href="?page=nilai"><i class="fa fa-archive" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="menu-title">NILAI</span></a>
             </li>
@@ -316,34 +314,8 @@ if (@$_SESSION['Guru']) {
           include 'modul/ujian/del_kelasujian.php';
         } elseif ($act == 'addkelasujian') {
           include 'modul/ujian/add_kelasujian.php';
-        } elseif ($act == 'addkelasujiane') {
-          include 'modul/ujian/essay/add_kelasujian.php';
-        } elseif ($act == 'delkelase') {
-          include 'modul/ujian/essay/del_kelasujian.php';
         }
-      } elseif ($page == 'essay') {
-        if ($act == '') {
-          include 'modul/essay/data_essay.php';
-        } elseif ($act == 'soalEssay') {
-          include 'modul/essay/soal_essay.php';
-        } elseif ($act == 'addessay') {
-          include 'modul/essay/add_essay.php';
-        } elseif ($act == 'aktifessay') {
-          include 'modul/essay/active_essay.php';
-        } elseif ($act == 'closeessay') {
-          include 'modul/essay/close_essay.php';
-        } elseif ($act == 'editessay') {
-          include 'modul/essay/edit_essay.php';
-        } elseif ($act == 'delessay') {
-          include 'modul/essay/del_essay.php';
-        } elseif ($act == 'delkelasujianessay') {
-          include 'modul/essay/del_kelasujian.php';
-        } else if ($act == 'close') {
-          include 'modul/essay/close_essay.php';
-        } elseif ($act == 'addkelasujianessay') {
-          include 'modul/essay/add_kelasujian.php';
-        }
-      } elseif ($page == 'nilai') {
+      }  elseif ($page == 'nilai') {
         if ($act == '') {
           include 'modul/nilai/data_nilai.php';
         } elseif ($act == 'view') {

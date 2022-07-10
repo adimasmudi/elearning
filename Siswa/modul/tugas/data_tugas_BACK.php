@@ -14,7 +14,7 @@
           <div class="row">
             <?php
             // cek tabel tugas
-            $kelas = mysqli_query($con, "SELECT * FROM kelas_tugas WHERE id_kelas='$_SESSION[kelas]' AND id_jurusan='$_SESSION[jurusan]' ORDER BY id_tugas DESC ");
+            $kelas = mysqli_query($con, "SELECT * FROM kelas_tugas WHERE id_kelas='$_SESSION[kelas]' ORDER BY id_tugas DESC ");
             $jumlah = mysqli_num_rows($kelas);
 
             foreach ($kelas as $d) { ?>

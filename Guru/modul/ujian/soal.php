@@ -9,8 +9,7 @@
     <div class="col-md-12">
       <span class="d-flex alifn-items-center">
         <a href="?page=ujian&act=soaladd&ID=<?= $_GET['id']; ?>" class="btn btn-dark"> <i class="fa fa-plus text-white"></i> Add Soal</a>
-        <button type='button' class='btn btn-info pull-right' data-toggle='modal' data-target='#modal_upload'> <i class='fa fa-file-excel-o text-white'></i> Upload File Excel
-        </button>
+        
         <a href="../Report/soal/print_soal.php?ID=<?= $_GET['id']; ?>" target="_blank" class="btn btn-danger"> <i class="fa fa-download text-white"></i> Download Soal</a>
 
       </span>
@@ -82,31 +81,3 @@
 </div>
 </div>
 
-<!-- Modal uploa xls -->
-<div class='modal modal-info fade' id="modal_upload">
-  <div class='modal-dialog'>
-    <div class='modal-content'>
-      <div class='modal-header'>
-        <h4 class='modal-title'>Upload EXCEL</h4>
-      </div>
-      <form action="?page=ujian&act=upSoal" enctype="multipart/form-data" method="post">
-        <input type="hidden" name="ujian" value="<?= $_GET['id']; ?>">
-        <div class='modal-body'>
-          <div class='form-group has-feedback'>
-            <input type="file" class="file" id="file" name="excel" class="form-control" required>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a href="../download/soal_template.xlsx" class="btn btn-success pull-left"><i class="fa fa-file-excel-o"></i> contoh excel</a>
-          <button name="uploadSoal" type="submit" class="btn btn-primary btn-save"><i class="fa fa-upload"></i> Upload</button>
-
-
-        </div>
-      </form>
-    </div>
-
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->

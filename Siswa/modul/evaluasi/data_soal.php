@@ -13,11 +13,11 @@
           <table class="table">
             <tbody>
               <?php
-              $tgl = date('Y-m-d');
+              
               $nomor = 1;
               $soal = mysqli_query($con, "SELECT * FROM ujian
                       INNER JOIN tb_master_mapel ON ujian.id_mapel=tb_master_mapel.id_mapel
-                      INNER JOIN kelas_ujian ON ujian.id_ujian=kelas_ujian.id_ujian WHERE tanggal='$tgl' AND kelas_ujian.id_kelas='$_SESSION[kelas]'
+                      INNER JOIN kelas_ujian ON ujian.id_ujian=kelas_ujian.id_ujian WHERE kelas_ujian.id_kelas='$_SESSION[kelas]'
                         ");
               foreach ($soal as $s) {  ?>
                 <tr>
@@ -32,7 +32,7 @@
                     <?php if ($tnilai > 0 and $rnilai['nilai'] != "") { ?>
                       <a data-toggle="modal" data-target="#myModal<?php echo $s['id_ujian'] ?>" href="<?php echo $s['id_ujian'] ?>" class="badge badge-pill badge-info" style="font-size: 14px;">
                         <i class="fa fa-pencil"></i>
-                        <?= $s['judul'] ?> - <?= $s['mapel'] ?> ?>
+                        <?= $s['judul'] ?>
                       </a> <?php } ?>
                     <!-- Modal -->
                     <div class="modal fade bs-example-modal-lg" id="myModal<?php echo $s['id_ujian'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -88,56 +88,8 @@
             </tbody>
           </table>
           <hr>
-          <!-- <p><b>KUMPULAN SOAL ESSAY</b></p>-->
-          <p><b>KUMPULAN SOAL ESSAY</b></p>
-          <table class="table">
-            <tbody>
-              <?php
-              $noe = 1;
-              $soal = mysqli_query($con, "SELECT * FROM ujian_essay
-                      INNER JOIN tb_master_mapel ON ujian_essay.id_mapel=tb_master_mapel.id_mapel
-                      INNER JOIN kelas_ujianessay ON ujian_essay.id_ujianessay=kelas_ujianessay.id_ujianessay WHERE kelas_ujianessay.id_kelas='$_SESSION[kelas]'
-                        ");
-              foreach ($soal as $s) {  ?>
-                <tr>
-                  <td width="50"><b><?= $noe++; ?>.</b></td>
-                  <td><a data-toggle="modal" data-target="#soalEssay<?php echo $s['id_ujianessay'] ?>" href="<?php echo $s['id_ujianessay'] ?>" class="badge badge-pill badge-primary" style="font-size: 14px;"> <i class="fa fa-pencil"></i>
-                      <?= $s['mapel'] ?>
-                    </a>
-                    <!-- Modal -->
-                    <div class="modal fade bs-example-modal-lg" id="soalEssay<?php echo $s['id_ujianessay'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                      <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header" style="margin-left: 25px;">
-                            <table style="font-weight:bold;font-family: consolas;font-size: 23px;">
-                              <tr>
-                                <td>SOAL ESSAY </td>
-                              </tr>
-                              <tr>
-                                <td>MATA PELAJARAN</td>
-                                <td>:</td>
-                                <td><b><?php echo $s['mapel']; ?></b> </td>
-                              </tr>
-
-                            </table>
-                          </div>
-                          <div class="modal-body" style="overflow: scroll;height: 500px;background-color: #fff;margin-left: 50px;">
-                            <?php echo $s['soal_essay']; ?>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="../Report/soal/print_soalessay.php?ID=<?= $s['id_ujianessay']; ?>" target="_blank" class="btn btn-primary"> <i class="fa fa-download text-white"></i> Download Soal</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-
-                  </td>
-                </tr>
-              <?php } ?>
-            </tbody>
-          </table>
+          
+          
 
         </div>
       </div>

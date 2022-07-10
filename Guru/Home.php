@@ -11,8 +11,7 @@ $materi = mysqli_num_rows(mysqli_query($con, "SELECT id_materi FROM tb_materi
  WHERE tb_roleguru.id_guru='$sesi' "));
 // ujian
 $objektif = mysqli_num_rows(mysqli_query($con, "SELECT id_ujian FROM ujian WHERE id_guru='$sesi' "));
-$essay = mysqli_num_rows(mysqli_query($con, "SELECT id_ujianessay FROM ujian_essay WHERE id_guru='$sesi' "));
-$ujian = $objektif + $essay;
+$ujian = $objektif
 
 ?>
 <div class="content-wrapper">

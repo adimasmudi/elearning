@@ -15,7 +15,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <!-- Vendor CSS Files -->
   <link href="vendor/assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="vendor/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,15 +24,12 @@
   <link href="vendor/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="vendor/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+
   <!-- Template Main CSS File -->
   <link href="vendor/assets/css/style_index.css?v=<?php echo time(); ?>" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Maxim - v4.7.0
-  * Template URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  
+  
 </head>
 
 <body>
@@ -64,7 +61,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="container text-center text-md-left" data-aos="fade-up">
-      <h1 claas="text-center">ONLINE CLASS M'TECH</h1>
+      <h1 class="text-center typing"></h1>
       <h2>Online Class M'Tech merupakan aplikasi e-learning berbasis website yang digunakan untuk membantu proses belajar mengajar secara online di Lembaga Kursus dan Pelatihan CV. Madura Technovation sehingga proses belajar mengajar lebih menarik, interaktif, dan bervariasi dengan memanfaatkan teknologi.</h2>
       <a href="login.php" class="btn-get-started scrollto">Get Started</a>
     </div>
@@ -427,7 +424,9 @@
   <!-- Template Main JS File -->
   <script src="vendor/assets/js/main.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+  
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
   <script type="text/javascript">
@@ -442,6 +441,15 @@
     $('#close').on('click', function() {
       $("#simpleModal").modal('hide');
     })
+     // typing text animation script
+     var typed = new Typed(".typing", {
+        strings: ["ONLINE CLASS M'TECH"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop : true
+    });
+
+    
   </script>
 
 </body>

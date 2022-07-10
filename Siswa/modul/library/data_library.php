@@ -28,7 +28,7 @@ $data_perangkat = mysqli_fetch_assoc($sqlmtr);
                                 <tr>
                                     <th>No</th>
                                     <th>Judul</th>
-                                    <th>Nama File</th>
+                                    <th>Jenis Library</th>
                                     <th>Action</th>
 
                                 </tr>
@@ -39,6 +39,9 @@ $data_perangkat = mysqli_fetch_assoc($sqlmtr);
 
                                 $jml = mysqli_num_rows($sqlmtr);
                                 foreach ($sqlmtr as $row) {
+                                    
+                                    $jenis_perangkat = mysqli_query($con,"SELECT jenis_perangkat FROM tb_jenisperangkat WHERE id_jenisperangkat='$row[id_jenisperangkat]'");
+                                    $hasil_jenis = mysqli_fetch_assoc($jenis_perangkat);
                                 ?>
 
                                     <tr style="border-top: 2px solid black;">
@@ -50,7 +53,7 @@ $data_perangkat = mysqli_fetch_assoc($sqlmtr);
 
 
                                         </td>
-                                        <td><b><?= $row['nama_perangkat']; ?></b></td>
+                                        <td><b><?= $hasil_jenis['jenis_perangkat'] ?></b></td>
                                         <td>
                                             <a data-toggle="modal" data-target="#<?= $row['id_perangkat']; ?>" class="btn btn-info btn-rounded btn-fw" style="color: #fff;"> <i class="fa fa-eye"></i>View</a>
                                             <?php if ($row['tipe_file'] == 'text') {
@@ -73,7 +76,7 @@ $data_perangkat = mysqli_fetch_assoc($sqlmtr);
 
                                                             <h4 class="modal-title">
                                                                 MATERI PEMBELAJARAN <br>
-                                                                <img class="menu-icon" src="../vendor/images/menu_icons/04.png" alt="menu icon"> <b> <?= $row['judul_materi']; ?></b> | <?= $row['mapel']; ?> KELAS <?= $row['kelas']; ?>-<?= $row['jurusan']; ?>
+                                                                <img class="menu-icon" src="../vendor/images/menu_icons/04.png" alt="menu icon"> <b> <?= $row['judul_materi']; ?></b> | <?= $row['mapel']; ?> KELAS <?= $row['kelas']; ?>
                                                             </h4>
                                                             <hr>
                                                         </div>

@@ -42,7 +42,7 @@
                     <div class="alert alert-dark alert-dismissible" role="alert">
                       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                       TUGAS <strong><?= $t['mapel'] ?> </strong>
-                      <p>
+                      
                       <p>
                         OLEH : <b><?= $t['nama_guru'] ?></b>
                       </p>

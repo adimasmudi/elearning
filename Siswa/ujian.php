@@ -1,6 +1,5 @@
-<script type="text/javascript" src="js/ujian.js"></script>
-<script type="text/javascript" src="js/jquery.countdownTimer.js"></script>
-<script src="js/kakyusuf.js"></script>
+<script type="text/javascript" src="js/ujian.js?v=<?php echo time();?>"></script>
+<script type="text/javascript" src="js/jquery.countdownTimer.js?v=<?php echo time();?>"></script>
 <script src="../vendor/ckeditor/plugins/ckeditor_wiris/integration/WIRISplugins.js?viewer=image"></script>
 <?php
 session_start();
@@ -103,23 +102,25 @@ $qnilai = mysqli_query($con, "SELECT * FROM nilai WHERE id_siswa='$_SESSION[id_s
 $rnilai = mysqli_fetch_array($qnilai);
 $sisa_waktu = explode(":", $rnilai['sisa_waktu']);
 
-echo '
+?>
 
 <li class="header">
            <div class="main">
            
            <span class="flex-putih">Pelajaran:  </span>
-            <span class="flex-item" style="background-color:#06C" id="soal">' . $rujian['judul'] . '</span>
-             <span class="flex-biru"> <div id="h_timer"></div></span>
-			 <span class="flex-abu">Sisa Waktu</span>            
+            <span class="flex-item" style="background-color:#06C" id="soal"><?= $rujian['judul'] ?></span>
+             <!-- <span class="flex-biru"><div id="h_timer"></div></span>
+			 <span class="flex-abu">Sisa Waktu</span>             -->
             </div>
         </li>
 
 
-<input type="hidden" id="ujian" value="' . $_GET['ujian'] . '">
-<input type="hidden" id="jam" value="' . $sisa_waktu[0] . '">
-<input type="hidden" id="menit" value="' . $sisa_waktu[1] . '">
-<input type="hidden" id="detik" value="' . $sisa_waktu[2] . '">';
+<input type="hidden" id="ujian" value="<?=$_GET['ujian'] ?>">
+<input type="hidden" id="jam" value="<?=$sisa_waktu[0] ?>">
+<input type="hidden" id="menit" value="<?= $sisa_waktu[1] ?>">
+<input type="hidden" id="detik" value="<?= $sisa_waktu[2] ?>">
+
+<?php
 
 //4 Mengambil data soal dari database
 $arr_soal = explode(",", $rnilai['acak_soal']);
@@ -890,8 +891,8 @@ echo '                  <!-- Modal -->
 			</p>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-success"  onclick="return selesai_ujian(' . $_GET['ujian'] . ')">SELESAI</button>
-                            <button type="submit" class="btn btn-danger" data-dismiss="modal">TIDAK</button>  
+        <button type="submit" class="btn btn-success">SELESAI</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">TIDAK</button>  
       </div>
       </form>
     </div>
@@ -903,3 +904,8 @@ echo '                  <!-- Modal -->
 
 ';
 ?>
+
+<script src="js/kakyusuf.js?v=<?php echo time();?>"></script>
+<script type="text/javascript">
+	alert("Halo")
+</script>

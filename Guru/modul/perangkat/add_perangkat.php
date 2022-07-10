@@ -64,7 +64,7 @@
                   <div class="form-group">
                     <label>File Perangkat</label>
                     <p>
-                      File yang bisa di Upload hanya file dengan ekstensi .doc, .docx, .xls, .xlsx, .ppt, .pptx, .pdf, .rar, .exe, .zip dan besar file (file size) maksimal hanya <b>2 MB</b>.
+                      File yang bisa di Upload hanya file dengan ekstensi  .ppt, .pptx, .pdf, .rar, .exe, .zip dan besar file (file size) maksimal hanya <b>2 MB</b>.
                     </p>
                     <input type="file" name="file" class="form-control" style="background-color: #212121;color: #fff;font-weight: bold;">
                   </div>
